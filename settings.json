@@ -1,0 +1,47 @@
+{
+	"comment":"设置文件：更改val后面的值改变设置，comment后面的是解释，不会影响软件",
+	"room_id": {
+		"comment":"要监听的房间号，默认192",
+		"val":192
+	},
+	"whitelist_uid": {
+		"comment":"真人路灯：白名单uid",
+		"val":[2601077]
+	},
+	"whitelist_dms": {
+		"comment": "真人路灯，激活弹幕，文字",
+		"val": ["灯"]
+	},
+	"loose_whitelist":{
+		"comment": "真人路灯，宽松白名单模式（只要弹幕符合就行，不用特定人发弹幕）(true:开启，false:关闭）",
+		"val": false
+	},
+	"blacklist_uid": {
+		"comment": "黑名单uid",
+		"val": [411683165]
+	},
+	"blacklist_dms": {
+		"comment": "黑名单弹幕，文字",
+		"val": ["晚安", "打卡", "滴","老板大气！点点红包抽礼物！"]
+	},
+	"ref_time": {
+		"comment": "基础平均时长，秒（正）",
+		"val": 1200
+	},
+	"avg_time": {
+		"comment": "对比平均时长，秒（正）",
+		"val": 60
+	},
+	"trigger_thresh":{
+		"comment": "触发阈值，比例（大于1）",
+		"val": 3
+	},
+	"timezone": {
+		"comment": "时区，如果输出文件的直时间戳不对，调整这个设置，小时（正/负)",
+		"val": 8
+	},
+	"use_preview": {
+		"comment": "软件支持直接内部看录播，设置true会让灯塔姬自动播放录播里找到的每个片段，这样就不用手动去翻了，关闭：false",
+		"val":true
+	}
+}

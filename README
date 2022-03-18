@@ -1,0 +1,21 @@
+Simple Bilibili Lighthouse Project
+
+When provided with a BVID or a live room number, this program will analyse
+the danmaku frequency, and use it to determine whether or not a timestamp
+is a potentially interesting enough to be clipped.
+
+The tool also allows the monitoring of danmakus from certain users, so that
+authorized users can quickly add timestamps while watching the stream.
+
+To use, download the release build, and run the executable with argument
+'--alive' for monitering live streams, or '--unalive' for analysing stream
+archive.
+
+After analysing a playback, the script will also open a web portal presenting
+all the timestamps found, and allow a human player to review the clips and
+filter out any false positives.
+
+Note: one of the dependency used by the project, bilibili_api, is no longer
+maintained, and may cause the script to no longer to work in the future.
+A rewrite of the script to remove the dependency is planned, but
+may not happen for very long time. Use at own risk.
