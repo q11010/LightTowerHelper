@@ -6,7 +6,7 @@ import sys
 import csv
 import unicodedata
 import datetime
-
+import danmakus_getter
 import aiohttp.client_exceptions
 import flask_cors
 from bilibili_api import live, video, user, sync
@@ -339,7 +339,7 @@ def xml_get_dms(bvid):
     #                     crc32_id=ps[6])
     #         dms.append(dm)
     # recursive download, no loss
-    dms = sync(v.get_danmakus(page_index=0))
+    dms = danmakus_getter.get_dms(bvid)
     logging.info(f"[录播弹幕下载器]弹幕文件下载成功")
     out = []
     while len(dms) > 0:

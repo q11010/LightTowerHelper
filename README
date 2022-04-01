@@ -19,3 +19,5 @@ Note: one of the dependency used by the project, bilibili_api, is no longer
 maintained, and may cause the script to no longer to work in the future.
 A rewrite of the script to remove the dependency is planned, but
 may not happen for very long time. Use at own risk.
+
+UPDATE: video danmuku part of the bilibili_api is dead, changed to custom implementation.
