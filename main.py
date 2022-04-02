@@ -392,7 +392,11 @@ def get_static_data(bvid: str):
             else:
                 logging.info(f"[弹幕获取器]获取用户名：{u}")
                 us = user.User(uid=dm.crack_uid())
-                u_name = sync(us.get_user_info())['name']
+                try:
+                    u_name = sync(us.get_user_info())['name']
+                except Exception as e:
+                    print(e)
+                    u_name = us.uid
                 cache_u_name[str(u)] = u_name
                 logging.info(f"[弹幕获取器]用户名：{u_name}")
             hits.append(
@@ -505,7 +509,7 @@ if __name__ == "__main__":
                     f"[主程序]启动弹幕获取器")
                 is_listening = True
                 has_listened = True
-                listener = threading.Thread(target=get_data, kwargs={"room": room, "debug_ext_data": debug_ext_data},
+                listener = threading.Thread(target=get_data,
                                             daemon=True)
                 listener.start()
             if not is_listening and has_listened:
