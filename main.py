@@ -173,8 +173,8 @@ def flask_start():
     @app.route('/save')
     def save():
         nonlocal count
-        count += 1
         filtered_hits.append(hits[count])
+        count += 1
         return redirect(url_for('pre_screen'))
 
     @app.route('/discard')
